@@ -1,5 +1,8 @@
 import ctypes
 import os
+import sys
+
+# https://blog.fbkcs.ru/elf-in-memory-execution/
 # read the executable file. It is a reverse shell in our case
 binary = open(sys.argv[1],'rb').read()
 
